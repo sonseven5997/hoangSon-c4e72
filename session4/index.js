@@ -1075,34 +1075,356 @@ let products = {
 //     }
 // }
 
-let  learningTask = {
-    HTML: {
-        name: 'HTML',
-        complete: false
-    },
-    CSS: {
-        name: 'CSS',
-        complete:  false
-    },
-    basicsOfJavaScript: {
-        name: 'Basics of Javascript',
-        complete: false
-    },
-    nodePackageManager: {
-        name:  'Node Package Manager (npm)',
-        complete: false
-    },
-    Git: {
-        name: 'Git',
-        complete: false
-    }
-}
+// let  learningTask = {
+//     HTML: {
+//         name: 'HTML',
+//         complete: false
+//     },
+//     CSS: {
+//         name: 'CSS',
+//         complete:  false
+//     },
+//     basicsOfJavaScript: {
+//         name: 'Basics of Javascript',
+//         complete: false
+//     },
+//     nodePackageManager: {
+//         name:  'Node Package Manager (npm)',
+//         complete: false
+//     },
+//     Git: {
+//         name: 'Git',
+//         complete: false
+//     }
+// }
 
 
-for (let k in learningTask){
-    console.log(k, learningTask[k])
-}
-let command = prompt('Enter your command (New, Delete, Update, Complete)').toUpperCase()
-if (command === 'NEW'){
-    newTask = prompt('Enter new task')
-}
+// for (let k in learningTask){
+//     console.log(k, learningTask[k])
+// }
+// let command = prompt('Enter your command (New, Delete, Update, Complete)').toUpperCase()
+// if (command === 'NEW'){
+//     newTask = prompt('Enter new task')
+//     learningTask[newTask] = {name: newTask.toString(), complete:false}
+//     console.log(learningTask)
+// }
+// else if (command === 'UPDATE'){
+//     let position = Number(prompt('Enter position'))
+//     let count = 0
+//     for (let k in learningTask){
+//         count +=1
+//         if (position === count){
+//             let newTitle = prompt('Enter new title')
+//             learningTask[k].name = newTitle
+//             console.log(learningTask)
+//         }
+//         else  {
+            
+//         }
+//     }
+// }
+// else if (command === 'COMPLETE'){
+//     let position = Number(prompt('Enter position'))
+//     let count = 0
+//     for (let k in learningTask){
+//         count +=1
+//         if (position === count){
+//             learningTask[k].complete = true
+//             console.log(learningTask)
+//         }
+//         else  {
+            
+//         }
+//     }
+// }
+// else if (command === 'DELETE'){
+//     let position = Number(prompt('Enter position'))
+//     let count = 0
+//     for (let k in learningTask){
+//         count +=1
+//         if (position === count){
+//             delete learningTask[k]
+//             console.log(learningTask)
+//         }
+//         else  {
+            
+//         }
+//     }
+// }
+// else {
+//     console.log('Wrong command, try again')
+// }
+
+
+// clear()
+// setshape('car')
+// const pos = {
+// x: 200,
+// y: 50,
+// }
+// penup()
+// fd(pos.x)
+// lt(270)
+// fd(pos.y)
+
+// clear()
+// setshape('car')
+// const square = {
+// x: 100,
+// y: 50,
+// width: 20,
+// };
+// penup()
+// fd(square.y)
+// lt(270)
+// fd(square.x)
+// pendown()
+// for (let i=0; i<4; i++){
+//   fd(square.width)
+//   lt(270)
+// }
+
+// clear()
+// setshape('car')
+// const rect = {
+// x: 100,
+// y: 50,
+// width: 20,
+// height: 40,
+// };
+// penup()
+// fd(rect.y)
+// lt(270)
+// fd(rect.x)
+// pendown()
+// for (let i=0; i<2; i++){
+//   fd(rect.width)
+//   lt(90)
+//   fd(rect.height)
+//   lt(90)
+// }
+
+
+// const cmds = [
+//     {
+//         shape: 'square',
+//         x: 20,
+//         y: 40,
+//         width: 50,
+//     },
+//     {
+//         shape: 'rect',
+//         x: 8,
+//         y: 70,
+//         width: 12,
+//         height: 40,
+//     },
+//     {
+//         shape: 'rect',
+//         x: 70,
+//         y: 70,
+//         width: 12,
+//         height: 40,
+//     },
+//     {
+//         shape: 'rect',
+//         x: 10,
+//         y: 20,
+//         width: 70,
+//         height: 20,
+//     },
+//     {
+//         shape: 'square',
+//         x: 25,
+//         y: 40,
+//         width: 14,
+//     },
+//     {
+//         shape: 'square',
+//         x: 33,
+//         y: 42,
+//         width: 6,
+//     },
+//     {
+//         shape: 'square',
+//         x: 50,
+//         y: 40,
+//         width: 14,
+//     },
+//     {
+//         shape: 'square',
+//         x: 58,
+//         y: 42,
+//         width: 6,
+//     },
+//     {
+//         shape: 'square',
+//         x: 40,
+//         y: 25,
+//         width: 8,
+//     },
+//     {
+//         shape: 'square',
+//         penWidth: 1,
+//         x: 500,
+//         y: 500,
+//         width: 15,
+//     },
+// ]
+// clear()
+// setshape('car')
+// for (let i=0; i<cmds.length; i++){
+//     if (cmds[i].shape  === 'square'){
+//         penup()
+//         fd(cmds[i].y)
+//         lt(270)
+//         fd(cmds[i].x)
+//         pendown()
+//         for (let j=0; j<4; j++){
+//             fd(cmds[i].width)
+//             lt(270)
+//         }
+//     }
+//     else {
+//         penup()
+//         fd(cmds[i].y)
+//         lt(270)
+//         fd(cmds[i].x)
+//         pendown()
+//         for (let j=0; j<2; j++){
+//             fd(cmds[i].width)
+//             lt(270)
+//             fd(cmds[i].height)
+//             lt(270)
+//         }
+//     }
+//     home()
+// }
+
+
+// const circle = {
+//     shape: 'circle',
+//     x: 100,
+//     y: 50,
+//     radius: 30,
+//     };
+// penup()
+// fd(circle.y)
+// lt(270)
+// fd(circle.x)
+// pendown()
+// const k = 2*Math.PI*circle.radius
+// for (let i=0; i<10000; i++){
+//     fd(k/10000)
+//     lt(360/10000)
+// }    
+
+// const cmds = [
+//     {
+//         shape: 'circle',
+//         x: 0,
+//         y: -20,
+//         radius: 60,
+//     },
+//     {
+//         shape: 'circle',
+//         x: 0,
+//         y: 80,
+//         radius: 40,
+//     },
+//     {
+//         shape: 'circle',
+//         x: -75,
+//         y: 10,
+//         radius: 20,
+//     },
+//       {
+//         shape: 'circle',
+//         x: 75,
+//         y: 10,
+//         radius: 20,
+//     },
+//     {
+//         shape: 'square',
+//         x: -65,
+//         y: -100,
+//         width: 30,
+//     },
+//       {
+//         shape: 'square',
+//         x: 38,
+//         y: -100,
+//         width: 30,
+//     },
+  
+//   {
+//         shape: 'rect',
+//         x: -30,
+//         y: 80,
+//         width: 20,
+//         height: 4
+//     },
+//     {
+//         shape: 'rect',
+//         x: 10,
+//         y: 80,
+//         width: 20,
+//         height: 4
+//     },
+//       {
+//         shape: 'rect',
+//         x: -10,
+//         y: 50,
+//         width: 20,
+//         height: 6
+//     },
+//   {
+//         shape: 'square',
+//         x: 500,
+//         y: 500,
+//         width: 20,
+//     },
+// ]
+// clear()
+// setshape('car')
+// for (let i=0; i<cmds.length; i++){
+//     if(cmds[i].shape === 'circle'){
+//         penup()
+//         fd(cmds[i].y)
+//         lt(270)
+//         fd(cmds[i].x)
+//         pendown()
+//         const k = 2*Math.PI*cmds[i].radius
+//         for (let i=0; i<10000; i++){
+//             fd(k/10000)
+//             lt(360/10000)
+//         }    
+//         home()
+//     }
+//     else if(cmds[i].shape === 'rect'){
+//         penup()
+//         fd(cmds[i].y)
+//         lt(270)
+//         fd(cmds[i].x)
+//         pendown()
+//         for (let j=0; j<2; j++){
+//             fd(cmds[i].width)
+//             lt(270)
+//             fd(cmds[i].height)
+//             lt(270)
+//         }
+//         home()
+//     }
+//     else if(cmds[i].shape === 'square'){
+//         penup()
+//         fd(cmds[i].y)
+//         lt(270)
+//         fd(cmds[i].x)
+//         pendown()
+//         for (let j=0; j<4; j++){
+//             fd(cmds[i].width)
+//             lt(270)
+//         }
+//         home()
+//     }
+// }
