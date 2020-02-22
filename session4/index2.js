@@ -1,28 +1,5 @@
-// --------------------Bài 1 -----------------------------
-// const product = {
-//     name: 'Xiaomi rice cooker',
-//     price: 1700,
-//     brand: 'Xiaomi',
-//     color: 'white'
-//     };
-//     for (let x in product) {
-//     console.log(x,': ', product[x]);
-//     }
-
-//--------------------------Bài 2 --------------------------    
-// const task = {
-//     subject: 'Implement login feature',
-//     createdBy: 'Hoang Ngoc Duc',
-//     assignTo: 'Nguyen Phuong Nam',
-//     dueDate: '2019-10-08T18:00:24+0000',
-//     expectedHours: 0.5
-//     };
-// var {subject, dueDate, assignTo} = task    
-// console.log(subject,', ', dueDate,', ', assignTo)
-
-//---------------------------Bài 3----------------------------
-var jobSearch =
-{
+// ----------------------------------Bài 15 ---------------------------------
+let jobData = {
     hits: [
         {
             benefits: [
@@ -954,484 +931,61 @@ var jobSearch =
     ]
 }
 
-// for (let x in jobSearch)
-// console.log(x, jobSearch[x])
-// let {hits} = jobSearch
-// for (let i=0; i<hits.length; i++){
-//         console.log(hits[i].jobTitle)
-//         console.log(hits[i].locations)
-//         console.log(hits[i].jobSalary)
-//         console.log(hits[i].benefits)
-//         console.log(hits[i].skills)
-//         console.log(hits[i].jobRequirement)
+// for (let i=0; i<jobData.hits.length; i++){
+//     console.log(jobData.hits[i])
 // }
 
-//------------------------Bài 4-----------------------------------------
-// let keyword = prompt('Enter a keyword').toLowerCase()
-// let dictionary = {
-//     debug: 'The process of figuring out why your program has a certain error and how to fix it',
-//     done:  'When your task is complete, the only thing you have to do is to wait for users to use it (no additional codes or actions needed)',
-//     defect: 'The formal word for ‘error’',
-//     pm: 'The short version of Project Manager, the person in charge of the final result of a project',
-//     ui: 'UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels',
-//     ux: 'UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels'
-// }
-// let flag = false
-//     index = ''
-// for (let x in dictionary){
-//     if (x !== keyword){
-//     }
-//     else {
-//         flag = true
-//         index = x
+// console.log(jobData.hits[0])
+// console.log(jobData.hits[0].jobTitle)
+// console.log(jobData.hits[0].benefits)
+// for (let i=0; i<jobData.hits[0].benefits.length; i++){
+//     for (let k in jobData.hits[0].benefits[i]){
+//         console.log(jobData.hits[0].benefits[i][k])
 //     }
 // }
-// if (flag == false){
-//     console.log(`We could not find your word: ${keyword}, leave your explaination`)
-//     let explaination = prompt(`We could not find your word: ${keyword}, leave your explaination`)
-//     alert(explaination)
-//     dictionary[keyword] = explaination
-// }
-// else {
-//     console.log(dictionary[index])
+// for (let i=0; i<jobData.hits.length; i++){
+//     console.log(jobData.hits[i].jobTitle)
 // }
 
-// console.log(dictionary)
-
-//------------------------------------------Bài 5 ------------------------------------
-// let products = {
-//     xiaomiCharger:
-//     {
-//         name: 'Xiaomi portable charger 20000mah',
-//         brand: 'Xiaomi',
-//         price: 428,
-//         color: 'White',
-//         category: 'Charger'
-//     },
-//     VSmartPhone:
-//     {
-//         name: 'VSmart Active 1',
-//         brand: 'VSmart',
-//         price: 5487,
-//         color: 'Black',
-//         category: 'Phone'
-//     },
-//     IPhone:
-//     {
-//         name: 'IPhone X',
-//         brand: 'Apple',
-//         price: 21490,
-//         color: 'Gray',
-//         category: 'Phone'
-//     },
-//     SamsungA9:
-//     {
-//         name: 'Samsung Galaxy A9',
-//         brand: 'Samsung',
-//         price: 8490,
-//         color: 'Blue',
-//         category: 'Phone'
-//     }
-// }
-// for (let k in products){
-//     console.log(k,':', products[k].name,  products[k].price)
-// }
-
-// let position = Number(prompt('Enter product position'))
-// let count = -1
-// for (let k in products){
-//     count += 1
-//     if (position === count){
-//         console.log(products[k])
-//     }
-//     else{
-
+// for (let i=0; i<jobData.hits.length; i++){
+//     for(let j=0; j<jobData.hits[i].benefits.length; j++){
+//         console.log(jobData.hits[i].benefits[j].benefitValue)
 //     }
 // }
 
-
-// let cat = prompt('Enter your category').toString().toUpperCase()
-// for (let k in products){
-//     products[k].category = products[k].category.toUpperCase()
-//     if (products[k].category === cat){
-//         console.log(products[k])
+// for (let i=0; i<jobData.hits.length; i++){
+//     console.log(jobData.hits[i].jobTitle)
+//     console.log(jobData.hits[i].locations[0])
+//     for(let j=0; j<jobData.hits[i].skills.length; j++){
+//         console.log(jobData.hits[i].skills[j])
 //     }
-//     else {
-
-//     }
+//     console.log(jobData.hits[i].jobSalary)
+//     console.log('=======================================')
 // }
 
-// products.xiaomiCharger.Providers = ['Phukienzero', 'Dientuccc']
-// products.VSmartPhone.Providers = ['Tgdd', 'Ddghn', 'VhStore']
-// products.IPhone.Providers = ['Tgdd']
-// products.SamsungA9.Providers = ['Tgdd']
-
-// console.log(products)
-// let provider = prompt('Enter a provider').toUpperCase()
-// for (let k in products){
-//     for (let i=0; i<products[k].Providers.length; i++){
-//         products[k].Providers[i] = products[k].Providers[i].toUpperCase()
-//         if (provider == products[k].Providers[i]){
-//         console.log(products[k])
-//         } 
-//         else {
-
-//         }
-//     }
-// }
-
-
-//----------------------------------Bài 6------------------------------------------------
-// let  learningTask = {
-//     HTML: {
-//         name: 'HTML',
-//         complete: false
+// --------------------Bài 16: -----------------------------
+// const oldData = {
+//     firedRice: {
+//     Price: 30,
+//     vnName: 'Com rang dua bo'
 //     },
-//     CSS: {
-//         name: 'CSS',
-//         complete:  false
+//     noddle: {
+//     price: 20,
+//     vnName: 'My tom chanh'
 //     },
-//     basicsOfJavaScript: {
-//         name: 'Basics of Javascript',
-//         complete: false
+//     pho: {
+//     price: 35,
+//     vnName: 'Pho bo tai chin'
 //     },
-//     nodePackageManager: {
-//         name:  'Node Package Manager (npm)',
-//         complete: false
-//     },
-//     Git: {
-//         name: 'Git',
-//         complete: false
-//     }
-// }
-
-
-// for (let k in learningTask){
-//     console.log(k, learningTask[k])
-// }
-// let command = prompt('Enter your command (New, Delete, Update, Complete)').toUpperCase()
-// if (command === 'NEW'){
-//     newTask = prompt('Enter new task')
-//     learningTask[newTask] = {name: newTask.toString(), complete:false}
-//     console.log(learningTask)
-// }
-// else if (command === 'UPDATE'){
-//     let position = Number(prompt('Enter position'))
-//     let count = 0
-//     for (let k in learningTask){
-//         count +=1
-//         if (position === count){
-//             let newTitle = prompt('Enter new title')
-//             learningTask[k].name = newTitle
-//             console.log(learningTask)
-//         }
-//         else  {
-            
-//         }
-//     }
-// }
-// else if (command === 'COMPLETE'){
-//     let position = Number(prompt('Enter position'))
-//     let count = 0
-//     for (let k in learningTask){
-//         count +=1
-//         if (position === count){
-//             learningTask[k].complete = true
-//             console.log(learningTask)
-//         }
-//         else  {
-            
-//         }
-//     }
-// }
-// else if (command === 'DELETE'){
-//     let position = Number(prompt('Enter position'))
-//     let count = 0
-//     for (let k in learningTask){
-//         count +=1
-//         if (position === count){
-//             delete learningTask[k]
-//             console.log(learningTask)
-//         }
-//         else  {
-            
-//         }
-//     }
-// }
-// else {
-//     console.log('Wrong command, try again')
-// }
-
-// -----------------------------------------Bài 7, 8, 9, 10, 11, 12 ------------------------------------------
-// clear()
-// setshape('car')
-// const pos = {
-// x: 200,
-// y: 50,
-// }
-// penup()
-// fd(pos.x)
-// lt(270)
-// fd(pos.y)
-
-// clear()
-// setshape('car')
-// const square = {
-// x: 100,
-// y: 50,
-// width: 20,
-// };
-// penup()
-// fd(square.y)
-// lt(270)
-// fd(square.x)
-// pendown()
-// for (let i=0; i<4; i++){
-//   fd(square.width)
-//   lt(270)
-// }
-
-// clear()
-// setshape('car')
-// const rect = {
-// x: 100,
-// y: 50,
-// width: 20,
-// height: 40,
-// };
-// penup()
-// fd(rect.y)
-// lt(270)
-// fd(rect.x)
-// pendown()
-// for (let i=0; i<2; i++){
-//   fd(rect.width)
-//   lt(90)
-//   fd(rect.height)
-//   lt(90)
-// }
-
-
-// const cmds = [
-//     {
-//         shape: 'square',
-//         x: 20,
-//         y: 40,
-//         width: 50,
-//     },
-//     {
-//         shape: 'rect',
-//         x: 8,
-//         y: 70,
-//         width: 12,
-//         height: 40,
-//     },
-//     {
-//         shape: 'rect',
-//         x: 70,
-//         y: 70,
-//         width: 12,
-//         height: 40,
-//     },
-//     {
-//         shape: 'rect',
-//         x: 10,
-//         y: 20,
-//         width: 70,
-//         height: 20,
-//     },
-//     {
-//         shape: 'square',
-//         x: 25,
-//         y: 40,
-//         width: 14,
-//     },
-//     {
-//         shape: 'square',
-//         x: 33,
-//         y: 42,
-//         width: 6,
-//     },
-//     {
-//         shape: 'square',
-//         x: 50,
-//         y: 40,
-//         width: 14,
-//     },
-//     {
-//         shape: 'square',
-//         x: 58,
-//         y: 42,
-//         width: 6,
-//     },
-//     {
-//         shape: 'square',
-//         x: 40,
-//         y: 25,
-//         width: 8,
-//     },
-//     {
-//         shape: 'square',
-//         penWidth: 1,
-//         x: 500,
-//         y: 500,
-//         width: 15,
-//     },
-// ]
-// clear()
-// setshape('car')
-// for (let i=0; i<cmds.length; i++){
-//     if (cmds[i].shape  === 'square'){
-//         penup()
-//         fd(cmds[i].y)
-//         lt(270)
-//         fd(cmds[i].x)
-//         pendown()
-//         for (let j=0; j<4; j++){
-//             fd(cmds[i].width)
-//             lt(270)
-//         }
-//     }
-//     else {
-//         penup()
-//         fd(cmds[i].y)
-//         lt(270)
-//         fd(cmds[i].x)
-//         pendown()
-//         for (let j=0; j<2; j++){
-//             fd(cmds[i].width)
-//             lt(270)
-//             fd(cmds[i].height)
-//             lt(270)
-//         }
-//     }
-//     home()
-// }
-
-
-// const circle = {
-//     shape: 'circle',
-//     x: 100,
-//     y: 50,
-//     radius: 30,
 //     };
-// penup()
-// fd(circle.y)
-// lt(270)
-// fd(circle.x)
-// pendown()
-// const k = 2*Math.PI*circle.radius
-// for (let i=0; i<10000; i++){
-//     fd(k/10000)
-//     lt(360/10000)
-// }    
 
-// const cmds = [
-//     {
-//         shape: 'circle',
-//         x: 0,
-//         y: -20,
-//         radius: 60,
-//     },
-//     {
-//         shape: 'circle',
-//         x: 0,
-//         y: 80,
-//         radius: 40,
-//     },
-//     {
-//         shape: 'circle',
-//         x: -75,
-//         y: 10,
-//         radius: 20,
-//     },
-//       {
-//         shape: 'circle',
-//         x: 75,
-//         y: 10,
-//         radius: 20,
-//     },
-//     {
-//         shape: 'square',
-//         x: -65,
-//         y: -100,
-//         width: 30,
-//     },
-//       {
-//         shape: 'square',
-//         x: 38,
-//         y: -100,
-//         width: 30,
-//     },
-  
-//   {
-//         shape: 'rect',
-//         x: -30,
-//         y: 80,
-//         width: 20,
-//         height: 4
-//     },
-//     {
-//         shape: 'rect',
-//         x: 10,
-//         y: 80,
-//         width: 20,
-//         height: 4
-//     },
-//       {
-//         shape: 'rect',
-//         x: -10,
-//         y: 50,
-//         width: 20,
-//         height: 6
-//     },
-//   {
-//         shape: 'square',
-//         x: 500,
-//         y: 500,
-//         width: 20,
-//     },
-// ]
-// clear()
-// setshape('car')
-// for (let i=0; i<cmds.length; i++){
-//     if(cmds[i].shape === 'circle'){
-//         penup()
-//         fd(cmds[i].y)
-//         lt(270)
-//         fd(cmds[i].x)
-//         pendown()
-//         const k = 2*Math.PI*cmds[i].radius
-//         for (let i=0; i<10000; i++){
-//             fd(k/10000)
-//             lt(360/10000)
-//         }    
-//         home()
+// let newData = []
+// for (let k in oldData){
+//     if (k == 'noddle'){
+
 //     }
-//     else if(cmds[i].shape === 'rect'){
-//         penup()
-//         fd(cmds[i].y)
-//         lt(270)
-//         fd(cmds[i].x)
-//         pendown()
-//         for (let j=0; j<2; j++){
-//             fd(cmds[i].width)
-//             lt(270)
-//             fd(cmds[i].height)
-//             lt(270)
-//         }
-//         home()
+//     else {
+//         newData[k] = oldData[k]
 //     }
-//     else if(cmds[i].shape === 'square'){
-//         penup()
-//         fd(cmds[i].y)
-//         lt(270)
-//         fd(cmds[i].x)
-//         pendown()
-//         for (let j=0; j<4; j++){
-//             fd(cmds[i].width)
-//             lt(270)
-//         }
-//         home()
-//     }
-// }    
+// }
+// console.log(newData)
