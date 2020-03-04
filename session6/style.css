@@ -1,0 +1,22 @@
+html{
+    font-family: 'Times New Roman', serif ;
+}
+
+#title {
+    color: red;
+    
+}
+.fs-20 {
+    font-size: 20px;
+}
+.blue-text {
+    color: blue;
+}
+.bg-green{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 50px;
+    border: crimson 10px hidden;
+}
