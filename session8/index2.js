@@ -264,20 +264,47 @@ let doc = [
     "quoteAuthor": "Byron Pulsifer"
     }
     ];
-let random = Math.floor(Math.random() * doc.length)
-let newElementText = document.createElement('h1')
-let newElementAuthor = document.createElement('p')
+
+// let newElementText = document.createElement('h1')
+// let newElementAuthor = document.createElement('p')
+// let bodyElement = document.querySelector('body')
+// function renderQuote(){
+//     random = Math.floor(Math.random() * doc.length)
+//     newElementText.innerText = doc[random].quoteText
+//     newElementAuthor.innerText = doc[random].quoteAuthor
+//     bodyElement.appendChild(newElementText)
+//     bodyElement.appendChild(newElementAuthor)
+// }
+// renderQuote(Math.floor(Math.random() * doc.length))
+// const reload = document.querySelector('button')
+// //let random2 = Math.floor(Math.random() * doc.length)
+// reload.addEventListener('click', renderQuote(Math.floor(Math.random() * doc.length)))
+
+// create text element and author element
 let bodyElement = document.querySelector('body')
-newElementText.innerText = doc[random].quoteText
-newElementAuthor.innerText = doc[random].quoteAuthor
-bodyElement.appendChild(newElementText)
-bodyElement.appendChild(newElementAuthor)
+let quoteElement = document.createElement('h1')
+let authorElement = document.createElement('p')
+bodyElement.appendChild(quoteElement)
+bodyElement.appendChild(authorElement)
+
+
 const reload = document.querySelector('button')
 reload.addEventListener('click', function(){
-    let random2 = Math.floor(Math.random() * doc.length)
-    newElementText.innerText = doc[random2].quoteText
-    newElementAuthor.innerText = doc[random2].quoteAuthor
-    bodyElement.appendChild(newElementText)
-    bodyElement.appendChild(newElementAuthor)
+    let random = generateFloorRandomNumber(doc.length);
+    updateQuoteAndAuthorContent(quoteElement, authorElement, doc[random]);
 })
 
+// generate a random number from 0 to maxNumber
+function generateFloorRandomNumber(maxNumber) {
+  return Math.floor(Math.random * maxNumber);
+}
+
+// update new text for quote and author, newQuoteObject is a type like this
+// {
+//   quoteText: "abc",
+//   quoteAuthor: "xyz"
+// }
+function updateQuoteAndAuthorContent(quoteElement, authorElement, newQuoteObject) {
+  quoteElement.innerText = newQuoteObject.quoteText;
+  quoteAuthor.innerText = newQuoteObject.quoteAuthor;
+}
