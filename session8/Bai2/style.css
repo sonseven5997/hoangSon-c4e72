@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: flex;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main{
+    display: block;
+}
+
+#button{
+    display: flex;
+}
+
+#input{
+    margin-right: 10px;
+    width: 100px;
+}
+
+.start{
+    margin-right: 10px;
+}
+
+h3{
+    display: block;
+    text-align: end;
+}

@@ -3,8 +3,18 @@
     padding: 0;
 }
 body{
-    height: 700px;
+    height: 720px;
 }
 button{
     float: right;
 }
+#flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+p{
+    text-align: end;
+}
+
