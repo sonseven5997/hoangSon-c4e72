@@ -18,20 +18,25 @@ btn.innerText = 'Add'
 input.placeholder = 'New item'
 addRemoveButton()
 btn.addEventListener('click',function(){
-    items.push(input.value)
-    container.innerText = ''
-    for  (let i=0; i<items.length;i++){
-        container.insertAdjacentHTML('beforeend', `<li>${items[i]}</li>`)
-    }         
+    // items.push(input.value)
+    // container.innerText = ''
+    // for  (let i=0; i<items.length;i++){
+    //     container.insertAdjacentHTML('beforeend', `<li>${items[i]}</li>`)
+    // }         
+    let tag = document.createElement('li')
+    tag.innerText = input.value
+    container.appendChild(tag)
     addRemoveButton()
 })
 
 
 function addRemoveButton(){
-    for  (let i=0; i<items.length;i++){
+    for  (let i=0; i<document.querySelectorAll('li').length;i++){
         let remove = document.createElement('button')
         remove.innerHTML = '<i class="fas fa-minus-circle"></i>'
+        if(container.querySelectorAll('li')[i].childElementCount == 0){
         container.querySelectorAll('li')[i].appendChild(remove)
+        }
     }             
 }
 // for(let i=0; i<items.length;i++){
@@ -44,16 +49,15 @@ function addRemoveButton(){
 //         addRemoveButton()       
 //     })
 // }
-function remove(i){
-    document.querySelectorAll('li')[i].querySelector('button').addEventListener('click', function(){
-        document.querySelectorAll('li')[i].innerText = ''
-        for (let j=i; j<items.length; j++){
-            document.querySelector('table').insertBefore(document.querySelectorAll('li')[j+1],document.querySelectorAll('li')[j])
-        }
-        document.getElementById('table').deleteRow(document.getElementById('table').rows.length-1)
-    })
-}
+    function remove(i){
+        document.querySelectorAll('button')[i].addEventListener('click', function(e){
+            //this.parentNode.parentNode.removeChild(this.parentNode);
+            this.parentNode.remove(this.parentNode)
+            console.log(e.target)
+        })
+    }    
+    for (let j=1; j<document.querySelectorAll('button').length+1; j++){
+        remove(j)
+    }
+    
 
-remove(0);
-remove(1);
-remove(2)
