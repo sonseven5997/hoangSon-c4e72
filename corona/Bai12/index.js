@@ -49,15 +49,15 @@ function addRemoveButton(){
 //         addRemoveButton()       
 //     })
 // }
-    function remove(i){
-        document.querySelectorAll('button')[i].addEventListener('click', function(e){
-            //this.parentNode.parentNode.removeChild(this.parentNode);
-            this.parentNode.remove(this.parentNode)
-            console.log(e.target)
-        })
-    }    
-    for (let j=1; j<document.querySelectorAll('button').length+1; j++){
-        remove(j)
-    }
-    
+function remove(i){
+    document.querySelectorAll('button')[i].addEventListener('click', function(e){
+        //this.parentNode.parentNode.removeChild(this.parentNode);
+        this.parentNode.remove(this.parentNode)
+        console.log(e.target)
+    })
+}    
+for (let j=1; j<document.querySelectorAll('button').length+1; j++){
+    remove(j)
+}
+
 
