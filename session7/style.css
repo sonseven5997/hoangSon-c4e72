@@ -1,0 +1,26 @@
+/* p{
+    color: red;
+}
+#p1{
+    color: blue;
+} */
+/* p{
+    color: blue;
+}
+#h21{
+    color: blue;
+} */
+/* .division{
+    background-color: cornsilk;
+    width: 500px;
+    border: 1px solid green;
+    padding: 40px 50px;
+} */
+.parent{
+    border: 1px solid green
+}
+
+.child{
+    background-color: red;
+    margin-left: 60px;
+}

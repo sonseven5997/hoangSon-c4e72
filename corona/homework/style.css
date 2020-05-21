@@ -1,0 +1,12 @@
+#container{
+  width: 150px;
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 0;
+  height: 300px;
+  text-align: center;
+}
+
+#btn{
+    justify-content: space-evenly;
+}
